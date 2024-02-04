@@ -53,6 +53,7 @@
     max-width: 100%; /* Prevents overflow outside the container */
     flex-basis: 100%; /* Full width on smaller screens */
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 15px; /* Added padding for spacing */

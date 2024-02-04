@@ -1,5 +1,58 @@
 {% extends "home/layout.html" %}
+
+{% load static %}
    
 {% block body %}
-        <h1>The learn page will go here</h1>
+<div class="nav">
+    <div class="slideshow-container">
+        <div class="story active">
+            <div class="story_header">
+                <h2>What you should know about addiction, overdose, and narcan</h2>
+            </div>
+            <div class="main">
+                <div class="image-container">
+                        <img src="{% static 'home/formatted.jpg' %}" alt="Logo" class="responsive-image">
+                </div>
+                <div class="text-container">
+                        <p>Addiction is a complex and insidious process that often begins with initial exposure to a substance or behavior, setting the stage for a relentless cycle of dependency. When individuals first encounter a substance, such as opioids, or engage in a compulsive behavior, their brains undergo significant alterations. This initial interaction triggers the release of dopamine, a neurotransmitter associated with pleasure and reward, creating a pleasurable sensation [1]. Over time, repeated exposure leads to neuroadaptations, making the brain more tolerant to the substance's effects, requiring higher doses to achieve the same pleasure [2]. What's truly alarming is that addiction can take root swiftly, with statistics showing that nearly 21.5 million Americans aged 12 and older battled a substance use disorder in 2020, highlighting the pervasive nature of this issue [3]. Once entrenched in the addiction loop, individuals struggle with cravings and withdrawal symptoms, perpetuating the cycle and often causing profound social, psychological, and physical consequences [4]. Breaking free from addiction is a formidable challenge, but understanding its mechanics and seeking help is a crucial step towards recovery and a healthier future.</p>
+                </div>
+            </div>
+        </div>
+        <div class="story active">
+            <div class="story_header">
+                <h2>How does Narcan work? Is it safe?</h2>
+            </div>
+            <div class="main">
+                <div class="image-container">
+                        <img src="{% static 'home/narcan_mech.jpg' %}" alt="Logo" class="responsive-image">
+                </div>
+                <div class="text-container">
+                        <p>Narcan, also known as naloxone, is a life-saving medication designed to rapidly reverse opioid overdose by competitively binding to opioid receptors in the brain. Medically, naloxone is an opioid receptor antagonist, meaning it blocks the effects of opioids by binding more strongly to the same receptors without activating them. When administered intranasally or intravenously, Narcan displaces opioids from these receptors, rapidly reversing the respiratory depression and sedation associated with overdose. Its mechanism of action is both rapid and specific, making it a highly effective intervention in opioid emergencies [5].</p>
+                        <p>One of the most important aspects of Narcan is its exceptional safety profile. Naloxone does not produce euphoria or dependence, and it has minimal to no side effects when used as a life-saving measure in overdose situations. Importantly, administering Narcan to a person who is not experiencing an opioid overdose will not cause any harm or adverse effects [6]. This safety feature makes it a crucial tool for first responders, healthcare professionals, and even laypersons to carry and administer when faced with the potential for opioid overdose. The accessibility and safety of Narcan have played a pivotal role in saving countless lives by reversing the deadly effects of opioids.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- References -->
+    <div class="references">
+        <h1>References</h1>
+        <ol>
+                <li>Volkow, N. D., Koob, G. F., & McLellan, A. T. (2016). Neurobiologic Advances from the Brain Disease Model of Addiction. New England Journal of Medicine, 374(4), 363-371.</li>
+                <li>Koob, G. F., & Volkow, N. D. (2016). Neurobiology of addiction: a neurocircuitry analysis. The Lancet Psychiatry, 3(8), 760-773.</li>
+                <li>Substance Abuse and Mental Health Services Administration (SAMHSA). (2020). Key Substance Use and Mental Health Indicators in the United States: Results from the 2019 National Survey on Drug Use and Health.</li>
+                <li>National Institute on Drug Abuse (NIDA). (2020). Drugs, Brains, and Behavior: The Science of Addiction.</li>
+                <li>Wermeling, D. P. (2015). Review of naloxone safety for opioid overdose: practical considerations for new technology and expanded public access. Therapeutic Advances in Drug Safety, 6(1), 20-31.</li>
+                <li>American Society of Addiction Medicine. (2016). The ASAM National Practice Guideline for the Use of Medications in the Treatment of Addiction Involving Opioid Use. Journal of Addiction Medicine, 10(1), 1-92.</li>
+        </ol>
+        <ul>
+            <li><a href="https://nida.nih.gov/research-topics/trends-statistics/overdose-death-rates">NIDA Overdose Death Rates</a></li>
+            <li><a href="https://www.commonwealthfund.org/blog/2023/overdose-deaths-declined-remained-near-record-levels-during-first-nine-months-2022-states">Commonwealth Fund on Overdose Deaths</a></li>
+            <li><a href="https://recoveryconnections.hcph.org/discussion/177/narcan-information-and-ohio-availability">Narcan Information and Ohio Availability</a></li>
+        </ul>
+    </div>
+</div>
 {% endblock %}
+
+
