@@ -7,9 +7,6 @@ def index(request):
 def learn(request):
     return render(request,"home/learn.html")
 
-def about(request):
-    return render(request,"home/about.html")
-
 def contribute_index(request):
     return render(request, "home/contributor_index.html")
 def contribute(request,contributor):
