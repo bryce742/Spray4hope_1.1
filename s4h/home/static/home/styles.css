@@ -1,135 +1,111 @@
-      /* Header styles */
-      .header_div {
-        background-color: #FFD700; /* Darker yellow background color */
-        height: 100px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      body{
-        overflow: auto;
+/* Header styles */
+.header_div {
+    background-color: #FFD700; /* Darker yellow background color */
+    padding: 20px 0; /* Added vertical padding */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-      }
-      .main {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        margin-bottom: 20px;
-      }
-      .header {
-        color: #000080; /* Dark blue text color */
-        font-size: 36px;
-        font-weight: bold;
-      }
-      .story_header{
-        padding: 20px;
-        text-align:center;
-        background-color:#FFFFFF
-      }
-      .image-container{
-        flex-basis: 50%;
-        position: relative;
+.header {
+    color: #000080; /* Dark blue text color */
+    font-size: calc(24px + 1vw); /* Responsive font size */
+    font-weight: bold;
+}
 
-      }
-      .text-container{
-        flex-basis:50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
+/* Navigation menu styles */
+.nav {
+    background-color: #000080; /* Dark blue background color */
+    padding: 10px 0; /* Adjusted padding */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 18px; /* Adjusted font size */
+}
 
-      }
-      /* Navigation menu styles */
-      .nav {
-        background-color: #000080; /* Dark blue background color */
-        min-height: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        font-size: 1rem;
-      }
-      .nav a {
-        color: #FFFFFF; /* White text color */
-        margin: 0 20px;
-        text-decoration: none;
-        font-size: 24px;
-        font-weight: bold;
-        text-transform: uppercase;
-      }
-      .insta {
-        padding-top: 25px;
-      }
-      .insta img {
-        width:10%;
-        height: auto;
-      }
+.nav a {
+    color: #FFFFFF; /* White text color */
+    margin: 0 15px; /* Adjusted margin */
+    padding: 10px; /* Added padding */
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
 
-      .slideshow-container {
-        position: relative;
-        margin: 30px auto;
-        overflow: hidden;
-        box-sizing: border-box;
-        border: 2px solid black;
-        display: inline-block;
-        padding: 10px;
-      }
-      
-      @media (max-width: 767px) {
-        .slideshow-container {
-          border-width: 1px;
-          padding: 5px;
-        }
-      }
-      
-      @media (min-width: 768px) and (max-width: 991px) {
-        .slideshow-container {
-          border-width: 1.5px;
-          padding: 7px;
-        }
-      }
-      
-      @media (min-width: 992px) {
-        .slideshow-container {
-          border-width: 2px;
-          padding: 10px;
-        }
-      }      
-      .story {
-        opacity: 0;
-        transition: opacity 0.5s ease-in-out;
-      }
-      
-      .story.active {
-        opacity: 1;
-      }
-      
-      .prev,
-      .next {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: 2rem;
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
-      }
-      
-      .prev {
-        left: 10px;
-      }
-      
-      .next {
-        right: 10px;
-      }
-      .Overdoses23{
-        position: relative;
-        height: 30px;
-      }
-      .positioner{
-          position: fixed;
-      }
+.nav a:hover {
+    background-color: #f0f0f0; /* Subtle hover effect */
+    color: #000080; /* Change text color on hover */
+    border-radius: 5px; /* Soften edges */
+}
+
+/* Main content and story styles */
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.image-container, .text-container {
+    color: white;
+    box-sizing: border-box; /* Include padding and border in the element's total dimensions */
+    max-width: 100%; /* Prevents overflow outside the container */
+    flex-basis: 100%; /* Full width on smaller screens */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px; /* Added padding for spacing */
+}
+
+@media (min-width: 768px) {
+    .image-container, .text-container {
+        flex-basis: 50%; /* Adjust for wider screens */
+    }
+}
+
+.responsive-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.story_header {
+    box-sizing: border-box; /* Include padding and border in the element's total dimensions */
+    max-width: 100%; /* Prevents overflow outside the container */
+    width: 100%; /* Ensure full width */
+    padding: 20px;
+    text-align: center;
+    background-color: #FFFFFF; /* White background for contrast */
+    margin-bottom: 15px; /* Added spacing between stories */
+}
+
+/* Adjustments for slideshow container */
+.slideshow-container {
+    border: 2px solid black;
+    padding: 10px;
+    margin: 20px auto;
+    width: auto;
+    max-width: 90%;
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total dimensions */
+}
+
+.story {
+    box-sizing: border-box; /* Include padding and border in the element's total dimensions */
+    max-width: 100%; /* Prevents overflow outside the container */
+    display: none; /* Hide stories by default */
+}
+
+.story.active {
+    display: block; /* Only show active story */
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+    .nav {
+        font-size: 16px; /* Smaller font size for mobile */
+    }
+    .nav a {
+        margin: 0 10px; /* Smaller margin for mobile */
+        padding: 8px; /* Adjusted padding */
+    }
+}
