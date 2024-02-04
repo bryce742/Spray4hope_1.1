@@ -1,11 +1,28 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <title></title>
+        <link href="{% static 'home/styles.css' %}" rel="stylesheet">
         <style>
         </style>
     </head>
     <body>
+        <div class="header_div">
+            <a href="{% url 'home' %}">
+                <h1 class="header">sPray4Hope</h1>
+            </a>
+        </div>
+        <div class="nav">
+            <a href="{% url 'about' %}">About</a>
+            <a href="{% url 'contribute_index' %}">Contribute</a>
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'learn' %}">Learn</a>
+            <a href="{% url 'social_media' %}">Socials</a>
+            <a href="{% url 'stories' %}">Stories</a>
+        </div>
+
         {% block body %}
         {% endblock %}
     </body>
