@@ -8,4 +8,5 @@ urlpatterns =[
     path("contributor/<str:contributor>/",views.contribute,name="contribute"),
     path("social_media/",views.social_media,name="social_media"),
     path("stories/",views.stories,name="stories"),
+    path("events/",views.events,name="events"),
 ]

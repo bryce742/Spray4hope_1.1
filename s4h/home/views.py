@@ -19,3 +19,6 @@ def social_media(request):
 
 def stories(request):
     return render(request,"home/stories.html")
+
+def events(request):
+    return render(request,"home/events.html")
